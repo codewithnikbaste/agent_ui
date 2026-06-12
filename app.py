@@ -230,8 +230,12 @@ init_session_state()
 # ==============================================================================
 
 @st.cache_data
-def generate_complaint_data(num_records=5000, seed=42):
-    """Generate realistic complaint data using Faker and numpy"""
+def generate_complaint_data(num_records=1000, seed=42):
+    """Generate realistic complaint data using Faker and numpy
+    
+    Reduced to 1000 records for faster Streamlit Cloud deployment.
+    Increase num_records parameter for more data locally.
+    """
     
     random.seed(seed)
     np.random.seed(seed)
